@@ -1,0 +1,162 @@
+---
+title: "Poop map"
+author: "Russ"
+date: "2020/10/20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is theoretically reproducible code to make thar poop map. We'll start by importing the data. 
+
+## Load the poop data
+
+```{r thar poop data}
+library(readxl)
+nld_poop <- read_excel("C:/Users/rshea/Desktop/old computer/Chicago food inspections/nld.poop.xlsx")
+
+#these are a bunch of spatial packages
+library(sf)
+library(GISTools)
+library(rgdal)
+library(sp)
+
+#this is how you load the neederlands shape file
+
+nld.sf <- st_read("NLD_adm2.shp")
+
+#here's what the shape file looks like
+
+plot(nld.sf$geometry)
+
+```
+
+## Convert to spatial poop
+
+Next we will convert the coordinates from the excel sheet into a spatial object in the sp package and use the rest of the data from the spreadsheet to make a spatialpointsdata frame
+
+```{r poop points}
+poop.coords <- data.frame(x=nld_poop$X_coordinate, y=nld_poop$Y_coordinate)
+
+nld_poop.sp <- SpatialPointsDataFrame(poop.coords, nld_poop)
+```
+
+## Reproject the spatial poop
+
+Now we need to assign a projection to the spatial points in order to map.  the webiste that had the sewage sampling data provided an epsg code EPSG: 28992
+
+Which you can then look up a coresponding proj4 code for on this website: https://spatialreference.org/ref/epsg/?search=28992&srtext=Search
+
+There’s also this website that provides more info about the process:
+
+https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/understand-epsg-wkt-and-other-crs-definition-file-types/
+
+Then you can use the proj4string(object)<- “+ longass proj4string” command to set the correct projection
+
+```{r poop projections}
+proj4string(nld_poop.sp)<- "+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs "
+
+#then we can convert the sp poop points to simple featurs (sf) poop
+#I'm not sure if this step is actually neccesary...
+
+nld_poop.sf <- st_as_sf(nld_poop.sp)
+
+```
+
+## map the poop
+
+For the poop mapping we use thematic mapping and we set the mapping mode to view instead of plot. That's the step that makes an interactive webmap instead of just a static picture
+
+
+This new map makes the following changes
+
+1. Dots are proportional in size to the amount of RNA in the sample
+
+2. The color of the dot corresponds to the date of the sample
+
+3. the bubbles were made semi-transparent using the alpha term
+
+```{r poop map}
+#this creates a seperate layer for names which gives you more choices for things to turn and off in the viewer
+nld.admin.labels <- nld.sf
+
+#if this is changed to "plot" you get a static map
+tmap_mode("view")
+
+#this creates the admin regions
+tm_shape(nld.sf)+
+  tm_polygons(col="purple", alpha = 0.05)+
+  #alpha controls the transparency of the polygons
+  
+  #this adds the poop points
+  tm_shape(nld_poop.sf)+
+  tm_bubbles("RNA_per_ml",col="Date_measurement", alpha=0.5)+
+  
+  #this creates the names layer
+  tm_shape(nld.admin.labels)+
+  tm_text("NAME_2", size=1)
+```
+
+```{r final amp}
+#if this is changed to "plot" you get a static map
+tmap_mode("view")
+
+#this creates the admin regions
+poop.map.2 <- tm_shape(nld.sf)+
+  tm_polygons(col="purple", alpha = 0.05)+
+  #alpha controls the transparency of the polygons
+  
+  #this adds the poop points
+  tm_shape(nld_poop.sf)+
+  tm_bubbles("RNA_per_ml",
+             col="Date_measurement", 
+             palette= "PuBuGn",
+             alpha=0.5)+
+  
+  #this creates the names layer
+  tm_shape(nld.admin.labels)+
+  tm_text("NAME_2", size=1)
+
+poop.map.2
+```
+Here are some useful documentation files:
+
+https://www.rdocumentation.org/packages/tmap/versions/3.0/topics/tmap_animation
+
+https://www.rdocumentation.org/packages/tmap/versions/3.0/topics/tm_facets
+
+
+```{r mieedles stpe}
+netherlands.outline.sf <- st_union(nld.sf)
+```
+
+
+```{r giffie}
+tmap_mode("plot")
+
+netherlands.outline.sf <- st_union(nld.sf)
+
+poop.gif <-  tm_shape(netherlands.outline.sf)+
+  tm_polygons(col="purple", alpha = 0.05)+
+  #alpha controls the transparency of the polygons
+  
+  #this adds the poop points
+  tm_shape(nld_poop.sf)+
+  tm_bubbles("RNA_per_ml",
+             col="red",
+             alpha=0.8)+
+  tm_facets(along = "Date_measurement" , sync = FALSE, as.layers = TRUE)
+
+library(gifski)
+
+tmap_animation(poop.gif, filename="poop.gif", delay = 100, restart.delay = 300 )
+
+```
+
+
+Finally save the file as "reproducible poop.Rmd" in your working directory. Then load the markdown library library(rmarkdown) then use the command render("reproducible poop.Rmd") to create the HTML page in your library
+
+### ?tmap_save
+### tmap_save(poop.map) 
