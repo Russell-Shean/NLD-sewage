@@ -10,5 +10,5 @@ The is a work-in-progress repository. In this repositories are some ideas for ho
 
 
 # History
-10/2020 Code was written
+10/2020 Code was written         
 07/2021 Code was organized, but not updated, or significantly changed (Data was not updated!) 
