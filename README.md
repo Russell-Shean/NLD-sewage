@@ -21,6 +21,11 @@ The is a work-in-progress repository. In this repositories are some ideas for ho
    - Or viewed at the following link: 
    - The R markdown code used to make this html file is in the NLD COVID19 sewage sampling.Rmd file
 
+# Outputs
+
+1. An animation of sampling sites's RNA concentrations over time: Nld_sewageRNA.gif
+2. A zoomable map that shows data as color and RNA concentration as size: NLD_COVID19sewage_map.html
+
 
 
 # History
