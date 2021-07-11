@@ -9,7 +9,8 @@ The is a work-in-progress repository. In this repositories are some ideas for ho
 - This is a tutorial that shows how to make a map of SARS-CoV-2 RNA sewage sampling results in the Netherlands. The data comes from this website:      
   https://data.rivm.nl/meta/srv/chi/catalog.search#/metadata/a2960b68-9d3f-4dc3-9485-600570cd52b9?tab=relations 
 
-- For a more general explanation of SARS-CoV2 sewage sampling in the Netherlands (In English!😊): https://www.rivm.nl/en/covid-19/sewage
+- For a more general explanation of SARS-CoV2 sewage sampling in the Netherlands (In English!😊):      
+  https://www.rivm.nl/en/covid-19/sewage
 
 # Workflow
 
