@@ -1,9 +1,11 @@
-# SARS-CoV-2 RNA in waste water in the Netherlands
+# SARS-CoV-2 RNA in wastewater in the Netherlands
 The is a work-in-progress repository. In this repository are some ideas for how to map COVID-19 sewage sampling results for the Netherlands. Code was all written in R/Rmarkdown (not HTML)
 
 
-# Concentration of SARS-CoV-2 RNA in waste water by sampling site in The Netherlands 40/2020-10/2020
-<img src="https://github.com/Russell-Shean/NLD-COVID19-sewage/blob/main/Nld_sewageRNA.gif" width="400" height="auto" /> <img src="https://github.com/Russell-Shean/NLD-COVID19-sewage/blob/main/screenshot.jpg" width="400" height="auto" />
+# Concentration of SARS-CoV-2 RNA in wastewater by sampling site in The Netherlands 40/2020-10/2020
+<img src="https://github.com/Russell-Shean/NLD-COVID19-sewage/blob/main/Nld_sewageRNA.gif" width="400" height="auto" /> <img src="https://github.com/Russell-Shean/NLD-COVID19-sewage/blob/main/screenshot.jpg" width="400" height="auto" />     
+Left: Animation showing concentration of SARS-CoV2 RNA in wastewater by sampling site       
+Right: Screenshot from map
 
 # Intro
 - This is a tutorial that shows how to make a map of SARS-CoV-2 RNA sewage sampling results in the Netherlands. The data comes from this website:      
