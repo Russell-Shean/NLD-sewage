@@ -24,7 +24,7 @@ The is a work-in-progress repository. In this repository are some ideas for how 
 # Outputs
 
 1. An animation of sampling sites's RNA concentrations over time: Nld_sewageRNA.gif
-2. A zoomable map that shows data as color and RNA concentration as size:NLD_COVID19sewage_map.html       
+2. A zoomable map that shows data as color and RNA concentration as size: NLD_COVID19sewage_map.html       
    Also available at this link: https://tulipsfortaiwan.github.io/NLD_COVID19sewage_map.html 
  
 
