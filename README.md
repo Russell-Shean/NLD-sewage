@@ -1,4 +1,4 @@
-# NLD-sewage
+# SARS-CoV-2 RNA in waste water in the Netherlands
 The is a work-in-progress repository. In this repository are some ideas for how to map COVID-19 sewage sampling results for the Netherlands. Code was all written in R/Rmarkdown (not HTML)
 
 
@@ -31,3 +31,12 @@ The is a work-in-progress repository. In this repository are some ideas for how 
 # History
 10/2020 Code was written         
 07/2021 Code was organized, but not updated, or significantly changed (Data was not updated!) 
+
+# Possible future directions
+- Add map of sewer lines (perhaps focus on Amsterdam)
+  - Add small admin units shape files + population data
+  - Add buffer along sewer lines
+  - Add gradient function for distance from sewage line + distance from sampling point
+  - Calculate RNA/ population for each small admin area using distance gradient functions
+  - Senstivity analysis and parameter selection for 2 gradient functions
+  - Other factors? (Rainwater, sewer combined waste/rain or just waste?, etc)
