@@ -1,5 +1,5 @@
 # NLD-sewage
-The is a work-in-progress repository. In this repositories are some ideas for how to map COVID-19 sewage sampling results for the Netherlands. Code was all written in R/Rmarkdown (not HTML)
+The is a work-in-progress repository. In this repository are some ideas for how to map COVID-19 sewage sampling results for the Netherlands. Code was all written in R/Rmarkdown (not HTML)
 
 
 # Concentration of SARS-CoV-2 RNA in waste water by sampling site in The Netherlands 40/2020-10/2020
@@ -14,7 +14,7 @@ The is a work-in-progress repository. In this repositories are some ideas for ho
 
 # Workflow
 
-1. Download data from repository (or if you want a more recent version of the data, from the Dutch government website (☝️☝️ see link above ☝️☝️)
+1. Download data from this repository (or if you want a more recent version of the data, from the Dutch government website (☝️☝️ see link above ☝️☝️))
 2. Download the shapefiles (Important: keep all the files together in same folder or directory!)
 3. The main tutorial is presented in: NLD-COVID19-sewage-sampling.html 
    - The html file can be downloaded and opened in a web browser
