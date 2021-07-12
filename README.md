@@ -3,7 +3,7 @@ The is a work-in-progress repository. In this repository are some ideas for how 
 
 
 # Concentration of SARS-CoV-2 RNA in waste water by sampling site in The Netherlands 40/2020-10/2020
-<img src="https://github.com/Russell-Shean/NLD-COVID19-sewage/blob/main/Nld_sewageRNA.gif" width="400" height="auto" />
+<img src="https://github.com/Russell-Shean/NLD-COVID19-sewage/blob/main/Nld_sewageRNA.gif" width="400" height="auto" /> < img src="https://github.com/Russell-Shean/NLD-COVID19-sewage/blob/main/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202021-07-12%20163205.jpg" width="400" height="auto" />
 
 # Intro
 - This is a tutorial that shows how to make a map of SARS-CoV-2 RNA sewage sampling results in the Netherlands. The data comes from this website:      
