@@ -44,4 +44,4 @@ Right: Screenshot from map
   - Calculate RNA/ population for each small admin area using distance gradient functions
   - Senstivity analysis and parameter selection for 2 gradient functions
   - Other factors? (Rainwater, sewer combined waste/rain or just waste?, etc)
-- Modify the method used on the <a href="https://github.com/minvws/nl-covid19-data-backend-processing/blob/master/main/sql/stored_procedures/vwsdest/R__COA_SP__Sewer_GM.sql?fbclid=IwAR00pJLw42dgPpdWT3wlNTIVdnQ7cPa3D4BEfNb9ByoDCimq7Q1WEe81lDM">GitHub</a> for Dutch govt data <a href="https://coronadashboard.government.nl/landelijk/rioolwater">dashboard</a>.
+- Modify the method used on the <a href="https://github.com/minvws/nl-covid19-data-backend-processing/blob/master/main/sql/stored_procedures/vwsdest/R__COA_SP__Sewer_GM.sql?fbclid=IwAR00pJLw42dgPpdWT3wlNTIVdnQ7cPa3D4BEfNb9ByoDCimq7Q1WEe81lDM">GitHub</a> for Dutch government data <a href="https://coronadashboard.government.nl/landelijk/rioolwater">dashboard</a>.
