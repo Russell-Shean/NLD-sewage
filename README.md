@@ -8,26 +8,26 @@ Left: Animation showing concentration of SARS-CoV2 RNA in wastewater by sampling
 Right: Screenshot from map
 
 # Intro
-- This is a tutorial that shows how to make a map of SARS-CoV-2 RNA sewage sampling results in the Netherlands. The data comes from this website:      
-  https://data.rivm.nl/meta/srv/chi/catalog.search#/metadata/a2960b68-9d3f-4dc3-9485-600570cd52b9?tab=relations 
+- This is a tutorial that shows how to make a map of SARS-CoV-2 RNA sewage sampling results in the Netherlands. The data comes from the <a href="https://data.rivm.nl/meta/srv/chi/catalog.search#/metadata/a2960b68-9d3f-4dc3-9485-600570cd52b9?tab=relations">Dutch government</a>.     
+   
 
-- For a more general explanation of SARS-CoV2 sewage sampling in the Netherlands (In English!😊):      
-  https://www.rivm.nl/en/covid-19/sewage
+- They've also published <a href="https://www.rivm.nl/en/covid-19/sewage">general explanation</a> in English of SARS-CoV2 sewage sampling in the Netherlands.      
+  
 
 # Workflow
 
-1. Download data from this repository (or if you want a more recent version of the data, from the Dutch government website (☝️☝️ see link above ☝️☝️))
+1. Download data from this repository (or if you want a more recent version of the data, from the Dutch government <a href="https://data.rivm.nl/meta/srv/chi/catalog.search#/metadata/a2960b68-9d3f-4dc3-9485-600570cd52b9?tab=relations">website</a>).
 2. Download the shapefiles (Important: keep all the files together in same folder or directory!)
 3. The main tutorial is presented in: NLD-COVID19-sewage-sampling.html 
    - The html file can be downloaded and opened in a web browser
-   - Or viewed at the following link: https://tulipsfortaiwan.github.io/NLD-COVID19-sewage-sampling.html
+   - Or viewed at this <a href="https://tulipsfortaiwan.github.io/NLD-COVID19-sewage-sampling.html">link</a>.
    - The R markdown code used to make this html file is in: NLD COVID19 sewage sampling.Rmd
 
 # Outputs
 
 1. An animation of sampling sites's RNA concentrations over time: Nld_sewageRNA.gif
 2. A zoomable map that shows data as color and RNA concentration as size: NLD_COVID19sewage_map.html       
-   Also available at this link: https://tulipsfortaiwan.github.io/NLD_COVID19sewage_map.html 
+   Also available at this <a href="https://tulipsfortaiwan.github.io/NLD_COVID19sewage_map.html">link</a>. 
  
 
 
@@ -44,3 +44,4 @@ Right: Screenshot from map
   - Calculate RNA/ population for each small admin area using distance gradient functions
   - Senstivity analysis and parameter selection for 2 gradient functions
   - Other factors? (Rainwater, sewer combined waste/rain or just waste?, etc)
+- Flow (see the <a href="https://github.com/minvws/nl-covid19-data-backend-processing/blob/master/main/sql/stored_procedures/vwsdest/R__COA_SP__Sewer_GM.sql?fbclid=IwAR00pJLw42dgPpdWT3wlNTIVdnQ7cPa3D4BEfNb9ByoDCimq7Q1WEe81lDM">GitHub</a> for Dutch govt data <a href="https://coronadashboard.government.nl/landelijk/rioolwater">dashboard</a>).
